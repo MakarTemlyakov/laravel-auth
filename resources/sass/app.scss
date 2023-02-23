@@ -1,14 +1,48 @@
+//palate
+$palate-white: #ffffff;
+$palate-gallery: #eaeaea;
+$palate-blue: #0029ff;
+$palate-spunpearl: #b1b0b6;
+$palate-black: #020214;
+
+//background
+$main-background: $palate-gallery;
+$form-background: $palate-white;
+
+//link
+$primary-link: $palate-blue;
+$hover-link: $palate-black;
+
+//border
+$border-primary: $palate-spunpearl;
+$border-focus: $palate-blue;
+
+// button
+$button-primary: $palate-black;
+$button-hover: $palate-blue;
+
+// text
+$text-secondary: $palate-white;
+
 html,
 body {
     display: flex;
     flex-direction: column;
-    background: white;
+    background: $main-background;
     height: 100%;
     margin: 0;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 .main {
     flex-grow: 1;
+}
+
+.title {
+    margin: 0;
 }
 
 .row-wrapper {
@@ -24,14 +58,29 @@ body {
     height: 100%;
 }
 
-.register-form {
+.link {
+    transition: 0.3 color ease-in;
+    font-size: 18px;
+    font-weight: 500;
+    color: $primary-link;
+    text-decoration: underline;
+}
+
+.link:hover,
+.link:focus {
+    color: $hover-link;
+}
+
+.form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
     padding: 20px;
-    background: bisque;
+    width: 30%;
+    border-radius: 5px;
+    background: $form-background;
 
     &__group {
         display: flex;
@@ -40,8 +89,40 @@ body {
     }
 }
 
+input {
+    padding: 10px;
+    border: 1px solid $border-primary;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+input:focus {
+    outline: 1px solid $border-focus;
+}
+
 .column_2 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+}
+
+.button {
+    font-size: 18px;
+    padding: 14px 30px;
+    border: 1px solid transparent;
+    background: $button-primary;
+    color: $text-secondary;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s background ease-out;
+}
+
+.button:hover {
+    background: $button-hover;
+}
+
+.label {
+    font-size: 18px;
+    font-weight: 600;
 }

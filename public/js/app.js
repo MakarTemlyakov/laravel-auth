@@ -19351,7 +19351,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 /* provided dependency */ var Buffer = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js")["Buffer"];
-// Axios v1.3.3 Copyright (c) 2023 Matt Zabriskie and contributors
+// Axios v1.3.4 Copyright (c) 2023 Matt Zabriskie and contributors
 
 
 function bind(fn, thisArg) {
@@ -20567,6 +20567,8 @@ var URLSearchParams$1 = typeof URLSearchParams !== 'undefined' ? URLSearchParams
 
 var FormData$1 = typeof FormData !== 'undefined' ? FormData : null;
 
+var Blob$1 = typeof Blob !== 'undefined' ? Blob : null;
+
 /**
  * Determine if we're running in a standard browser environment
  *
@@ -20621,7 +20623,7 @@ var platform = {
   classes: {
     URLSearchParams: URLSearchParams$1,
     FormData: FormData$1,
-    Blob
+    Blob: Blob$1
   },
   isStandardBrowserEnv,
   isStandardBrowserWebWorkerEnv,
@@ -21969,7 +21971,7 @@ function mergeConfig(config1, config2) {
   return config;
 }
 
-const VERSION = "1.3.3";
+const VERSION = "1.3.4";
 
 const validators$1 = {};
 

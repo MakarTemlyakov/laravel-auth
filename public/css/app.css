@@ -2,13 +2,21 @@ html,
 body {
   display: flex;
   flex-direction: column;
-  background: white;
+  background: #eaeaea;
   height: 100%;
   margin: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .main {
   flex-grow: 1;
+}
+
+.title {
+  margin: 0;
 }
 
 .row-wrapper {
@@ -24,23 +32,70 @@ body {
   height: 100%;
 }
 
-.register-form {
+.link {
+  transition: 0.3 color ease-in;
+  font-size: 18px;
+  font-weight: 500;
+  color: #0029ff;
+  text-decoration: underline;
+}
+
+.link:hover,
+.link:focus {
+  color: #020214;
+}
+
+.form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
   padding: 20px;
-  background: bisque;
+  width: 30%;
+  border-radius: 5px;
+  background: #ffffff;
 }
-.register-form__group {
+.form__group {
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #b1b0b6;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+input:focus {
+  outline: 1px solid #0029ff;
 }
 
 .column_2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+}
+
+.button {
+  font-size: 18px;
+  padding: 14px 30px;
+  border: 1px solid transparent;
+  background: #020214;
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s background ease-out;
+}
+
+.button:hover {
+  background: #0029ff;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: 600;
 }
