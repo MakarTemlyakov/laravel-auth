@@ -18,11 +18,8 @@ class RegisterController extends Controller
             ['password' => bcrypt($request->password)]
         ));
 
-        $message = 'You were successfully registered. Use your email and password to sign in.';
-        // return response()->json([
-        //     'message' => 'You were successfully registered. Use your email and password to sign in.'
-        // ], 200);
-
-        return view('login')->with('message', $message);
+        return response()->json([
+            'message' => 'Successfull complete registered.'
+        ], 200);
     }
 }

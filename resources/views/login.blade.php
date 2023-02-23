@@ -15,7 +15,6 @@
                 <div class="row-wrapper">
                     <form class="register-form" action="api/login" method="post">
                         <div class="register-form__group">
-                          
                             <label for="email" >Введите email:</label>
                             <input id="email" type="text" name="email"/>
                         </div>

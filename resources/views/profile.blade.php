@@ -14,8 +14,7 @@
                 <div class="row-wrapper">
                     <h1>Profile page</h1>
                     <h2>Токен пользователя:</h2>
-                    <p> {{$name}}</p>
-                 
+                    <p> {{$troken}}</p>
                 </div>
             </div>
             </section>
